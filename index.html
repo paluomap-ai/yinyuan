@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>测一测你的古代姻缘命格</title>
-<meta name="description" content="四十道日常小事，不问生辰，只看你下意识怎么选。">
+<title>测一测你的古风恋爱人格</title>
+<meta name="description" content="四十道生活小事单选题，从你下意识的选择里看恋爱性格，匹配一位气质相近的古人。">
 <style>
-/* Hallmark · shape: app screen · genre: playful · theme: custom · idea: "月老的红线从第一问牵到最后一问，系上的那一端是你的命格签" · vibe: "月白天青，胭脂红线，轻快的古风" · job: try
+/* Hallmark · shape: app screen · genre: playful · theme: custom · idea: "一条红线从第一问牵到最后一问，另一端是一张竖排的古人卡" · vibe: "月白天青，胭脂红线，轻快的古风" · job: try
  * paper: oklch(97% 0.01 170) 月白，取自用户要的古风且避开米黄宣纸 · accent: oklch(53% 0.15 18) 胭脂，只给红线、选中与主按钮 · display: 系统楷体 (STKaiti / KaiTi) · body: 系统黑体 (PingFang SC / Microsoft YaHei)
- * nav: 答题时一条细顶栏，左边“姻缘簿”，右边题号 · signature: 红线进度与竖排命格签 · states: 启动页, 答题, 答完, 翻簿, 卦象不稳(反套测), 结果, 分享卡, 合盘
+ * nav: 答题时一条细顶栏，左边“古人档案”，右边题号 · signature: 红线进度与竖排古人卡 · states: 启动页, 答题, 答完, 翻档案, 作答不认真(反套测), 结果, 分享卡, 配对
  * axes: light/handwritten/chromatic-red · posture: restrained · contrast: pass · v2.0.0 */
 /* Hallmark · dismissed 23 · the accent .fill is an 8px index bar inside a 30rem reading column, three of them, far under 5% of the viewport */
 /* Hallmark · pre-emit critique: P4 H4 E4 S5 R4 V5 · weakest: P, 古风测试容易落成一堆祥云纹样，只留红线和一枚收尾的印，其余交给竖排楷体和留白 */
@@ -106,7 +106,7 @@ svg { display: block; }
 .knot { position: absolute; top: 50%; left: 0; width: 100%; height: 0; pointer-events: none; transform: translateX(0); transition: transform var(--dur-long) var(--ease-out); }
 .knot::before { content: ""; position: absolute; left: -5px; top: -5px; width: 10px; height: 10px; border-radius: 50%; background: var(--color-accent); }
 
-/* 簿页 */
+/* 题目页 */
 .stage { padding-block: var(--space-xl) var(--space-2xl); }
 .sheet { position: relative; max-width: 40rem; margin-inline: auto; padding: var(--space-2xl) var(--space-2xl) var(--space-xl); background: var(--color-paper); border: 1px solid var(--color-rule); border-radius: var(--radius-card); }
 .sheet::before { content: ""; position: absolute; inset: 7px; border: 1px solid var(--color-rule); border-radius: calc(var(--radius-card) - 5px); pointer-events: none; opacity: 0.7; }
@@ -139,7 +139,7 @@ svg { display: block; }
 .reasons li { padding-left: var(--space-md); border-left: 2px solid var(--color-accent); color: var(--color-ink-2); }
 .row { display: flex; flex-wrap: wrap; gap: var(--space-sm); justify-content: center; margin-top: var(--space-sm); }
 
-/* 翻簿 */
+/* 翻档案 */
 .reckon { min-height: 70dvh; display: grid; place-items: center; }
 .book { position: relative; width: 220px; height: 160px; perspective: 900px; }
 .book .page, .book .leaf { position: absolute; top: 0; width: 50%; height: 100%; background: var(--color-paper-2); border: 1px solid var(--color-rule); }
@@ -244,14 +244,14 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
     <div class="wrap">
       <div class="splash-grid">
         <div class="title-col">
-          <h1 class="title" id="t-title"><span>测一测你的</span><br><span>古代姻缘命格</span></h1>
-          <span class="seal" aria-hidden="true">姻缘</span>
+          <h1 class="title" id="t-title"><span>测一测你的</span><br><span>古风恋爱人格</span></h1>
+          <span class="seal" aria-hidden="true">知己</span>
         </div>
         <div class="intro">
-          <p class="lead">不报生辰八字，只问四十件日常小事。你下意识怎么选，古人就替你把姻缘走一遍。</p>
-          <button class="btn" id="startBtn" type="button">开始起卦</button>
-          <p class="meta">共 40 问，约 4 分钟，答完即出签</p>
-          <p class="fine">本测试为娱乐性质的趣味测评。结果人物只作气质参照，不代表对历史人物的评价；细节取自公开流传的典故与轶事。不收集任何信息，所有计算都在你的浏览器里完成。</p>
+          <p class="lead">不问星座血型，只问四十件生活小事。从你下意识的选择里，看看你的恋爱性格像哪位古人。</p>
+          <button class="btn" id="startBtn" type="button">开始测试</button>
+          <p class="meta">共 40 题，约 4 分钟，答完即出结果</p>
+          <p class="fine">本测试为娱乐性质的性格趣味测评，根据作答习惯分析性格倾向，并匹配一位气质相近的历史人物。人物只作参照，不代表对历史人物的评价；细节取自公开流传的典故与轶事。不收集任何信息，所有计算都在你的浏览器里完成。</p>
         </div>
       </div>
     </div>
@@ -260,7 +260,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
   <header class="bar" id="bar" hidden>
     <div class="wrap">
       <div class="bar-in">
-        <span class="wordmark">姻缘簿</span>
+        <span class="wordmark">古人档案</span>
         <span class="count num" id="count" aria-live="polite">1 / 40</span>
       </div>
       <div class="progress" aria-hidden="true">
@@ -278,7 +278,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
       <div class="sheet">
         <div class="sheet-in" id="sheetIn">
           <p class="qno" id="qno">第一问</p>
-          <h2 class="qtext" id="qtext" tabindex="-1">先用哪本命格簿算你？</h2>
+          <h2 class="qtext" id="qtext" tabindex="-1">先选一个版本</h2>
           <p class="qnote" id="qnote" hidden></p>
           <ol class="opts" id="opts"></ol>
         </div>
@@ -293,8 +293,8 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
   <section id="done" class="stage" hidden aria-labelledby="done-h">
     <div class="wrap">
       <div class="sheet center">
-        <h2 class="big" id="done-h" tabindex="-1">四十问已毕</h2>
-        <p class="soft">红线已经牵好，就差揭签了。</p>
+        <h2 class="big" id="done-h" tabindex="-1">四十题全部答完</h2>
+        <p class="soft">你的性格画像已经生成，就差看结果了。</p>
         <div class="row">
           <button class="btn" id="revealBtn" type="button">一键出结果</button>
         </div>
@@ -308,21 +308,21 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
       <div class="book" aria-hidden="true">
         <span class="page l"></span><span class="page r"></span>
         <span class="leaf"></span><span class="leaf"></span><span class="leaf"></span>
-        <span class="stamp">定</span>
+        <span class="stamp">成</span>
       </div>
-      <p>正在翻姻缘簿</p>
+      <p>正在翻古人档案</p>
     </div>
   </section>
 
   <section id="unsteady" class="stage" hidden aria-labelledby="un-h">
     <div class="wrap">
       <div class="sheet center">
-        <h2 class="big" id="un-h" tabindex="-1">卦象不稳</h2>
-        <p class="soft">心诚则灵。这一卦有点像在套题：</p>
+        <h2 class="big" id="un-h" tabindex="-1">答题有点随意</h2>
+        <p class="soft">认真作答，结果才准。这次作答有点像在随手点：</p>
         <ul class="reasons" id="reasons"></ul>
         <div class="row">
-          <button class="btn" id="retryBtn" type="button">重新起卦</button>
-          <button class="btn btn--quiet" id="forceBtn" type="button">仍然揭签</button>
+          <button class="btn" id="retryBtn" type="button">重新测试</button>
+          <button class="btn btn--quiet" id="forceBtn" type="button">仍然看结果</button>
         </div>
       </div>
     </div>
@@ -331,10 +331,10 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
   <section id="result" class="result" hidden aria-labelledby="r-title">
     <div class="wrap">
       <div class="result-grid">
-        <aside class="lot" aria-label="你的命格签">
-          <div class="lot-head"><span id="rBook">女命簿</span><span id="rSincere" class="num"></span></div>
+        <aside class="lot" aria-label="你的古人卡">
+          <div class="lot-head"><span id="rBook">女生版</span><span id="rSincere" class="num"></span></div>
           <div class="lot-body">
-            <span class="lot-seal" aria-hidden="true">姻缘</span>
+            <span class="lot-seal" aria-hidden="true">知己</span>
             <p class="lot-name" id="rName">李清照</p>
             <h2 class="lot-title" id="r-title">把酒问春</h2>
           </div>
@@ -363,14 +363,14 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
           <p class="sincere" id="rNote"></p>
           <div class="actions">
             <button class="btn" id="shareBtn" type="button">生成分享卡</button>
-            <button class="btn btn--quiet" id="pairBtn" type="button">和TA合盘</button>
+            <button class="btn btn--quiet" id="pairBtn" type="button">和TA比一比</button>
             <button class="btn btn--quiet" id="copyBtn" type="button">复制转发文案</button>
           </div>
           <p class="status" id="status" role="status" aria-live="polite"></p>
           <div class="result-foot">
-            <button class="link" id="againBtn" type="button">重新起卦</button>
+            <button class="link" id="againBtn" type="button">重新测试</button>
             <p class="fine" id="firstNote" hidden></p>
-            <p class="fine">本测试为娱乐性质的趣味测评，人物只作气质参照，不代表对历史人物的评价。不收集任何个人信息，作答只在本机计算。</p>
+            <p class="fine">本测试为娱乐性质的性格趣味测评，人物只作气质参照，不代表对历史人物的评价。不收集任何个人信息，作答只在本机计算。</p>
           </div>
         </div>
       </div>
@@ -381,26 +381,26 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
 </main>
 
 <dialog id="shareDlg" aria-labelledby="share-h">
-  <h2 id="share-h">你的命格签</h2>
+  <h2 id="share-h">你的古人卡</h2>
   <div class="dlg-body">
     <div id="cardBox"></div>
     <p class="fine">手机上长按图片保存；电脑上点下载。</p>
     <div class="dlg-actions">
-      <a class="btn" id="dlBtn" download="姻缘命格.png" href="#">下载图片</a>
+      <a class="btn" id="dlBtn" download="古风恋爱人格.png" href="#">下载图片</a>
       <button class="btn btn--quiet" type="button" data-close>关闭</button>
     </div>
   </div>
 </dialog>
 
 <dialog id="pairDlg" aria-labelledby="pair-h">
-  <h2 id="pair-h">和TA合盘</h2>
+  <h2 id="pair-h">和TA比一比</h2>
   <div class="dlg-body">
-    <p class="fine">让TA也测一次，再在这里选TA的命格。</p>
-    <label class="field">TA的命格
+    <p class="fine">让TA也测一次，再在这里选TA测出的古人。</p>
+    <label class="field">TA的结果
       <select class="select" id="pairSel"></select>
     </label>
     <div class="dlg-actions">
-      <button class="btn" type="button" id="pairGo">看判词</button>
+      <button class="btn" type="button" id="pairGo">看看合不合拍</button>
       <button class="btn btn--quiet" type="button" data-close>关闭</button>
     </div>
     <div class="verdict" id="verdict" hidden aria-live="polite"><b id="vKind"></b><p id="vText"></p></div>
@@ -408,7 +408,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
 </dialog>
 
 <script id="engine">
-/* 姻缘簿 计分引擎：纯数据与纯函数，不碰页面 */
+/* 古风恋爱人格 计分引擎：纯数据与纯函数，不碰页面 */
 (function (root) {
   var DIMS = ['wind', 'wall', 'anchor', 'lamp'];
   var DIM_INFO = {
@@ -465,9 +465,9 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
     a3: { dim: 'anchor', text: '周末早上醒来，今天没有任何安排。你会：',
       opts: [['先列出今天要做的三件事', 2], ['吃完早饭再想干什么', 1], ['想到哪儿就做到哪儿', 0]] },
     a4: { dim: 'anchor', text: '出去旅行订住处，你一般：',
-      opts: [['出发前全订好，选可退的', 2], ['先订第一晚，后面再看', 1], ['到了再找，看缘分', 0]] },
+      opts: [['出发前全订好，选可退的', 2], ['先订第一晚，后面再看', 1], ['到了再找，随遇而安', 0]] },
     a5: { dim: 'anchor', text: '聊得不错的人说：“以后有空再约。”你会：',
-      opts: [['当场约好具体哪一天', 2], ['记着，过两天再提一次', 1], ['“好呀”，有缘自然会约', 0]] },
+      opts: [['当场约好具体哪一天', 2], ['记着，过两天再提一次', 1], ['“好呀”，有空自然会约', 0]] },
     a6: { dim: 'anchor', text: '常去的那家店突然关门了。你会：',
       opts: [['当晚就找好一家替代的', 2], ['失落一下，以后再找', 1], ['正好，换换口味', 0]] },
     a7: { dim: 'anchor', text: '朋友说：“晚饭吃什么，你来挑。”你会：',
@@ -499,11 +499,11 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
 
   /* 两道验心题：不计分，只看有没有认真读题 */
   var CHECKS = {
-    t1: { text: '此为验心题，不计入命格。请选“落子无悔”。', opts: ['举棋不定', '落子无悔', '观棋不语'], answer: '落子无悔' },
-    t2: { text: '又一道验心题。请选“花好月圆”。', opts: ['月落乌啼', '风花雪月', '花好月圆'], answer: '花好月圆' }
+    t1: { text: '这是一道注意力小题，不计分。请选“落子无悔”。', opts: ['举棋不定', '落子无悔', '观棋不语'], answer: '落子无悔' },
+    t2: { text: '又一道注意力小题。请选“花好月圆”。', opts: ['月落乌啼', '风花雪月', '花好月圆'], answer: '花好月圆' }
   };
 
-  var GENDER_Q = { text: '先用哪本命格簿算你？', opts: [['男命簿', 'male'], ['女命簿', 'female']] };
+  var GENDER_Q = { text: '先选一个版本', opts: [['男生版', 'male'], ['女生版', 'female']] };
 
   /* 第 40 题：分性别，双维度计分 */
   var FINAL = {
@@ -550,7 +550,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
       skill: '一句话终结一场争论', idx: [34, 71, 89] },
     { code: 'wangzhaojun', gender: 'female', title: '关山有月', name: '王昭君', v: [2, 10, 8, 1],
       tagline: '话留给自己，体面留给别人',
-      why: '你的心事是“选择性开放”的。最软的部分收得很紧，外面永远得体、稳定、不给人添麻烦。朋友吐槽时你总在听，轮到你，你说“我还好”。你不是没话，你在等一个不用解释也能懂你的人。你的姻缘常在远方：换个城市、换个圈子，你才会松一点。',
+      why: '你的心事是“选择性开放”的。最软的部分收得很紧，外面永远得体、稳定、不给人添麻烦。朋友吐槽时你总在听，轮到你，你说“我还好”。你不是没话，你在等一个不用解释也能懂你的人。你等的那个人常在远方：换个城市、换个圈子，你才会松一点。',
       egg: '史书里她的名字都记得不全，“昭君”是她的字，“落雁”是后人给的形容。她弹得一手好琵琶，关于她的故事流传了两千年，她本人却从没解释过一句。你也一样：别人说什么，你都让它停在门外。',
       skill: '在陌生环境里活得比谁都稳', idx: [12, 66, 94] },
     { code: 'huangyueying', gender: 'female', title: '南阳择木', name: '黄月英', v: [9, 5, 8, 2],
@@ -602,7 +602,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
   ];
 
   var HIDDEN = { lo: 3.2, hi: 6.8, p: 0.7 };
-  /* 分布校准：模拟作答后得到的距离偏移，让各命格出现得更均匀 */
+  /* 分布校准：模拟作答后得到的距离偏移，让各个结果出现得更均匀 */
   var BIAS = {"zhuowenjun":0.54,"liqingzhao":-0.65,"zhangsun":-0.6,"shangguan":0.3,"xiedaoyun":-1.62,"wangzhaojun":1.57,"huangyueying":0.45,"sushi":0.01,"wangwei":0.65,"zhangchang":-1.09,"fanli":-0.49,"zhouyu":0.4,"zhugeliang":0.52};
 
   function maxFor(gender) {
@@ -677,7 +677,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
       var i = rec.answers[id];
       if (i == null || CHECKS[id].opts[i] !== CHECKS[id].answer) missed++;
     });
-    if (missed) { score -= missed * 30; reasons.push(missed === 2 ? '两道验心题都没按题目要求选' : '有一道验心题没按题目要求选'); }
+    if (missed) { score -= missed * 30; reasons.push(missed === 2 ? '两道注意力小题都没按题目要求选' : '有一道注意力小题没按题目要求选'); }
     var med = median(rec.times || []);
     if (med && med < 1100) { score -= 30; reasons.push('平均每题不到一秒，像是没读完就点了'); }
     var pos = rec.positions || [];
@@ -839,14 +839,14 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
     var m = Y.match(u, g, seedOf(), !v.steady);
     var f = m.fig;
     S.result = { u: u, m: m, v: v };
-    $('rBook').textContent = g === 'female' ? '女命簿' : '男命簿';
-    $('rSincere').textContent = '心诚度 ' + v.score;
+    $('rBook').textContent = g === 'female' ? '女生版' : '男生版';
+    $('rSincere').textContent = '认真度 ' + v.score;
     $('r-title').textContent = f.title;
     $('rName').textContent = f.name;
     $('rTag').textContent = f.tagline;
     var chips = $('rChips'); chips.innerHTML = '';
     function chip(t, accent) { var c = document.createElement('span'); c.className = 'chip' + (accent ? ' chip--accent' : ''); c.textContent = t; chips.appendChild(c); }
-    if (f.hidden) chip('隐藏签：四维太均衡的人才会抽到', true);
+    if (f.hidden) chip('隐藏款：四维都很均衡的人才会测到', true);
     chip('契合度：' + m.tier);
     $('rWhy').textContent = f.why;
     $('rEgg').textContent = f.egg;
@@ -874,8 +874,8 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
       dims.appendChild(el);
     });
     $('rNote').textContent = v.steady
-      ? '心诚度 ' + v.score + '：前后答案对得上，这一签可以信。'
-      : '心诚度 ' + v.score + '：这一卦答得有点飘，签文仅供一笑，想看准的可以重新起卦。';
+      ? '认真度 ' + v.score + '：前后答案对得上，这个结果可以参考。'
+      : '认真度 ' + v.score + '：这次答得有点随意，结果仅供一笑，想看准的可以重新测试。';
     var first = $('firstNote'); first.hidden = true;
     try {
       var key = 'yinyuanbu-first', rec = JSON.parse(localStorage.getItem(key) || 'null');
@@ -883,7 +883,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
       else {
         rec.n = (rec.n || 1) + 1;
         first.hidden = false;
-        first.textContent = '今天这是第 ' + rec.n + ' 卦。你的首签是“' + rec.title + '”（' + rec.name + '），心诚则灵，以首签为准。';
+        first.textContent = '今天这是第 ' + rec.n + ' 次测试。你第一次测出的是“' + rec.title + '”（' + rec.name + '），第一次最接近你的下意识，建议以它为准。';
       }
       localStorage.setItem(key, JSON.stringify(rec));
     } catch (e) { /* 隐私模式下不记 */ }
@@ -931,7 +931,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
     ctx.beginPath(); ctx.moveTo(62, 1000); ctx.bezierCurveTo(300, 930, 520, 1080, 760, 980); ctx.bezierCurveTo(880, 930, 960, 960, W - 62, 900); ctx.stroke();
     ctx.textBaseline = 'top'; ctx.textAlign = 'left';
     ctx.fillStyle = col('--color-muted'); ctx.font = '34px ' + body;
-    ctx.fillText((S.gender === 'male' ? '男命簿' : '女命簿') + '　心诚度 ' + r.v.score, 120, 130);
+    ctx.fillText((S.gender === 'male' ? '男生版' : '女生版') + '　认真度 ' + r.v.score, 120, 130);
     ctx.textAlign = 'center';
     ctx.fillStyle = col('--color-ink'); ctx.font = '150px ' + disp; vText(ctx, f.title, 820, 220, 168);
     ctx.fillStyle = col('--color-ink-2'); ctx.font = '64px ' + disp; vText(ctx, f.name, 640, 300, 76);
@@ -941,7 +941,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
     ctx.fillStyle = col('--color-muted'); ctx.font = '32px ' + body;
     ctx.fillText('契合度：' + r.m.tier, 120, y + 40);
     var sy = y + 96;
-    if (f.hidden) { ctx.fillStyle = col('--color-accent'); ctx.fillText('隐藏签', 120, sy); sy += 56; }
+    if (f.hidden) { ctx.fillStyle = col('--color-accent'); ctx.fillText('隐藏款', 120, sy); sy += 56; }
     ctx.fillStyle = col('--color-muted'); ctx.font = '30px ' + body; ctx.fillText('隐藏技能', 120, sy + 40);
     ctx.fillStyle = col('--color-ink-2'); ctx.font = '42px ' + disp; wrapText(ctx, f.skill, 120, sy + 90, 400, 64);
     var labels = ['直球', '心软', '会装'];
@@ -952,11 +952,11 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
       ctx.fillStyle = col('--color-accent'); ctx.fillRect(240, by + 14, 600 * n / 100, 14);
       ctx.fillStyle = col('--color-ink'); ctx.textAlign = 'right'; ctx.fillText(n + '%', 960, by); ctx.textAlign = 'left';
     });
-    ctx.fillStyle = col('--color-ink'); ctx.font = '42px ' + disp; ctx.fillText('测一测你的古代姻缘命格', 120, 1300);
+    ctx.fillStyle = col('--color-ink'); ctx.font = '42px ' + disp; ctx.fillText('测一测你的古风恋爱人格', 120, 1300);
     ctx.save(); ctx.translate(910, 1318); ctx.rotate(-0.1);
     ctx.fillStyle = col('--color-accent'); ctx.fillRect(-56, -56, 112, 112);
     ctx.fillStyle = col('--color-accent-ink'); ctx.font = '44px ' + disp; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText('姻', 0, -22); ctx.fillText('缘', 0, 26); ctx.restore();
+    ctx.fillText('知', 0, -22); ctx.fillText('己', 0, 26); ctx.restore();
     return c.toDataURL('image/png');
   }
 
@@ -968,7 +968,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
 
   function fillPairSel() {
     var sel = $('pairSel'); sel.innerHTML = '';
-    [['female', '女命簿'], ['male', '男命簿']].forEach(function (g) {
+    [['female', '女生版'], ['male', '男生版']].forEach(function (g) {
       var og = document.createElement('optgroup'); og.label = g[1];
       Y.FIGURES.filter(function (f) { return f.gender === g[0]; }).forEach(function (f) {
         var o = document.createElement('option'); o.value = f.code; o.textContent = f.title + '（' + f.name + '）'; og.appendChild(o);
@@ -998,8 +998,8 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
   $('againBtn').addEventListener('click', function () { show('splash'); $('startBtn').focus(); });
   $('shareBtn').addEventListener('click', function () {
     var url = drawCard();
-    var box = $('cardBox'); box.innerHTML = ''; var img = new Image(1080, 1440); img.className = 'card-img'; img.alt = '命格分享卡：' + S.result.m.fig.title + '，' + S.result.m.fig.name; img.src = url; box.appendChild(img); $('dlBtn').href = url;
-    $('dlBtn').setAttribute('download', '姻缘命格_' + S.result.m.fig.name + '.png');
+    var box = $('cardBox'); box.innerHTML = ''; var img = new Image(1080, 1440); img.className = 'card-img'; img.alt = '古人分享卡：' + S.result.m.fig.title + '，' + S.result.m.fig.name; img.src = url; box.appendChild(img); $('dlBtn').href = url;
+    $('dlBtn').setAttribute('download', '古风恋爱人格_' + S.result.m.fig.name + '.png');
     openDlg($('shareDlg'));
   });
   $('pairBtn').addEventListener('click', function () { $('verdict').hidden = true; openDlg($('pairDlg')); });
@@ -1012,7 +1012,7 @@ dialog .dlg-body { display: grid; gap: var(--space-md); margin-top: var(--space-
   });
   $('copyBtn').addEventListener('click', function () {
     var f = S.result.m.fig;
-    copy('我测出来是“' + f.title + '”，' + f.name + '。' + f.tagline + '。你在古代是什么姻缘命格？');
+    copy('我测出来是“' + f.title + '”，' + f.name + '。' + f.tagline + '。测测你的恋爱性格像哪位古人？');
   });
   document.addEventListener('keydown', function (e) {
     if ($('quiz').hidden || S.busy) return;
